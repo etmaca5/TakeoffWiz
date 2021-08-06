@@ -18,6 +18,7 @@
 		91796E5326BCE3E9005EDF13 /* finalDesktop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91796E5226BCE3E9005EDF13 /* finalDesktop.jpg */; };
 		91B53F6126BCEF1C008118F7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6026BCEF1C008118F7 /* Utilities.swift */; };
 		91B53F6326BCFA60008118F7 /* Cessna172s.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6226BCFA60008118F7 /* Cessna172s.swift */; };
+		91B53F6526BD0994008118F7 /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6426BD0994008118F7 /* EulaViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		91796E5226BCE3E9005EDF13 /* finalDesktop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = finalDesktop.jpg; sourceTree = "<group>"; };
 		91B53F6026BCEF1C008118F7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		91B53F6226BCFA60008118F7 /* Cessna172s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cessna172s.swift; sourceTree = "<group>"; };
+		91B53F6426BD0994008118F7 /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				91796E3426AF99DD005EDF13 /* AppDelegate.swift */,
 				91796E3626AF99DD005EDF13 /* SceneDelegate.swift */,
 				91796E3A26AF99DD005EDF13 /* Main.storyboard */,
+				91B53F6426BD0994008118F7 /* EulaViewController.swift */,
 				91796E3826AF99DD005EDF13 /* ViewController.swift */,
 				91B53F6026BCEF1C008118F7 /* Utilities.swift */,
 				91796E4A26B88875005EDF13 /* Brain.swift */,
@@ -158,6 +161,7 @@
 				91796E3526AF99DD005EDF13 /* AppDelegate.swift in Sources */,
 				91796E4B26B88875005EDF13 /* Brain.swift in Sources */,
 				91B53F6326BCFA60008118F7 /* Cessna172s.swift in Sources */,
+				91B53F6526BD0994008118F7 /* EulaViewController.swift in Sources */,
 				91B53F6126BCEF1C008118F7 /* Utilities.swift in Sources */,
 				91796E3726AF99DD005EDF13 /* SceneDelegate.swift in Sources */,
 			);
