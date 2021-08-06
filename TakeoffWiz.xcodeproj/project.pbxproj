@@ -15,10 +15,10 @@
 		91796E4126AF99E0005EDF13 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 91796E3F26AF99E0005EDF13 /* LaunchScreen.storyboard */; };
 		91796E4B26B88875005EDF13 /* Brain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91796E4A26B88875005EDF13 /* Brain.swift */; };
 		91796E4F26BCD16B005EDF13 /* AppIcon.appiconset in Resources */ = {isa = PBXBuildFile; fileRef = 91796E4E26BCD16B005EDF13 /* AppIcon.appiconset */; };
-		91796E5326BCE3E9005EDF13 /* finalDesktop.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 91796E5226BCE3E9005EDF13 /* finalDesktop.jpg */; };
 		91B53F6126BCEF1C008118F7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6026BCEF1C008118F7 /* Utilities.swift */; };
 		91B53F6326BCFA60008118F7 /* Cessna172s.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6226BCFA60008118F7 /* Cessna172s.swift */; };
 		91B53F6526BD0994008118F7 /* EulaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6426BD0994008118F7 /* EulaViewController.swift */; };
+		91B53F6726BDAD49008118F7 /* finalDesktop.png in Resources */ = {isa = PBXBuildFile; fileRef = 91B53F6626BDAD49008118F7 /* finalDesktop.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,10 +32,10 @@
 		91796E4226AF99E0005EDF13 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		91796E4A26B88875005EDF13 /* Brain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Brain.swift; sourceTree = "<group>"; };
 		91796E4E26BCD16B005EDF13 /* AppIcon.appiconset */ = {isa = PBXFileReference; lastKnownFileType = folder; path = AppIcon.appiconset; sourceTree = "<group>"; };
-		91796E5226BCE3E9005EDF13 /* finalDesktop.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = finalDesktop.jpg; sourceTree = "<group>"; };
 		91B53F6026BCEF1C008118F7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		91B53F6226BCFA60008118F7 /* Cessna172s.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cessna172s.swift; sourceTree = "<group>"; };
 		91B53F6426BD0994008118F7 /* EulaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EulaViewController.swift; sourceTree = "<group>"; };
+		91B53F6626BDAD49008118F7 /* finalDesktop.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = finalDesktop.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -76,8 +76,8 @@
 				91B53F6026BCEF1C008118F7 /* Utilities.swift */,
 				91796E4A26B88875005EDF13 /* Brain.swift */,
 				91B53F6226BCFA60008118F7 /* Cessna172s.swift */,
+				91B53F6626BDAD49008118F7 /* finalDesktop.png */,
 				91796E3D26AF99E0005EDF13 /* Assets.xcassets */,
-				91796E5226BCE3E9005EDF13 /* finalDesktop.jpg */,
 				91796E4E26BCD16B005EDF13 /* AppIcon.appiconset */,
 				91796E3F26AF99E0005EDF13 /* LaunchScreen.storyboard */,
 				91796E4226AF99E0005EDF13 /* Info.plist */,
@@ -143,10 +143,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				91796E4F26BCD16B005EDF13 /* AppIcon.appiconset in Resources */,
-				91796E5326BCE3E9005EDF13 /* finalDesktop.jpg in Resources */,
 				91796E4126AF99E0005EDF13 /* LaunchScreen.storyboard in Resources */,
 				91796E3E26AF99E0005EDF13 /* Assets.xcassets in Resources */,
 				91796E3C26AF99DD005EDF13 /* Main.storyboard in Resources */,
+				91B53F6726BDAD49008118F7 /* finalDesktop.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
