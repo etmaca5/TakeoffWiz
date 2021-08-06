@@ -1,41 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TakeoffWiz" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="agree" id="BYZ-38-t0r" customClass="ViewController" customModule="TakeoffWiz" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="lkU-aw-yXS" userLabel="SliderStackView">
-                                <rect key="frame" x="10" y="278" width="390" height="430"/>
+                                <rect key="frame" x="10" y="224" width="390" height="420"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DO NOT USE FOR FLIGHT." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hH4-9V-c8m">
-                                        <rect key="frame" x="0.0" y="0.0" width="390" height="40"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MBg-2w-2Aw">
+                                        <rect key="frame" x="0.0" y="0.0" width="390" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cFj-hy-e23">
+                                                <rect key="frame" x="0.0" y="0.0" width="45" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="YbD-gR-c2v"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" white="0.13933515220000001" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" DO NOT USE FOR FLIGHT   " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qVa-3M-beN">
+                                                <rect key="frame" x="45" y="0.0" width="300" height="30"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" name="AccentColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="infoLight" showsTouchWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GZw-2Q-uZW">
+                                                <rect key="frame" x="345" y="0.0" width="45" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="uSK-zd-VI5"/>
+                                                    <constraint firstAttribute="height" constant="30" id="ypB-Bx-ykF"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="1" green="0.20112913120000001" blue="0.17832481140000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                </state>
+                                                <connections>
+                                                    <segue destination="ck2-qH-fUW" kind="show" identifier="Disclaimer" id="hNa-LA-Mli"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="oSG-Fr-qEg"/>
+                                            <constraint firstItem="GZw-2Q-uZW" firstAttribute="leading" secondItem="qVa-3M-beN" secondAttribute="trailing" id="jdZ-2u-cSi"/>
+                                            <constraint firstItem="qVa-3M-beN" firstAttribute="leading" secondItem="cFj-hy-e23" secondAttribute="trailing" id="jqC-8u-qtC"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <color key="textColor" red="1" green="0.13041269722195081" blue="0.20735337792540298" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    </stackView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ffF-hL-Gzo" userLabel="HeadwindView">
-                                        <rect key="frame" x="0.0" y="40" width="390" height="78"/>
+                                        <rect key="frame" x="0.0" y="30" width="390" height="78"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="5" minValue="-10" maxValue="50" translatesAutoresizingMaskIntoConstraints="NO" id="PLP-cb-75U">
                                                 <rect key="frame" x="2" y="41" width="386" height="30"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="29" id="l22-O3-VnB"/>
                                                 </constraints>
+                                                <color key="maximumTrackTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="headwindSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="OVf-PR-5lm"/>
                                                 </connections>
@@ -66,11 +97,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKv-4X-hci" userLabel="TempView">
-                                        <rect key="frame" x="0.0" y="118" width="390" height="78"/>
+                                        <rect key="frame" x="0.0" y="108" width="390" height="78"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="-20" maxValue="40" translatesAutoresizingMaskIntoConstraints="NO" id="Rpy-Wj-Vlt">
                                                 <rect key="frame" x="2" y="40" width="386" height="31"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="temperatureSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="WAf-Xo-aA4"/>
                                                 </connections>
@@ -103,11 +135,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6b8-it-W4E" userLabel="AltimeterView">
-                                        <rect key="frame" x="0.0" y="196" width="390" height="78"/>
+                                        <rect key="frame" x="0.0" y="186" width="390" height="78"/>
                                         <subviews>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="29.920000000000002" minValue="29" maxValue="30.5" translatesAutoresizingMaskIntoConstraints="NO" id="wO0-Xk-8BI">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="29.920000000000002" minValue="29.5" maxValue="30.5" translatesAutoresizingMaskIntoConstraints="NO" id="wO0-Xk-8BI">
                                                 <rect key="frame" x="2" y="40" width="386" height="31"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="altimeterSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="tXT-z3-sE8"/>
                                                 </connections>
@@ -139,7 +172,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="obn-ov-c2z" userLabel="ElevationView">
-                                        <rect key="frame" x="0.0" y="274" width="390" height="78"/>
+                                        <rect key="frame" x="0.0" y="264" width="390" height="78"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Airport elevation (ft)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W3R-PG-oFW">
                                                 <rect key="frame" x="8" y="9.5" width="153.5" height="20.5"/>
@@ -153,9 +186,10 @@
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="10000" translatesAutoresizingMaskIntoConstraints="NO" id="KO1-vW-bvB">
+                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="100" minValue="0.0" maxValue="8000" translatesAutoresizingMaskIntoConstraints="NO" id="KO1-vW-bvB">
                                                 <rect key="frame" x="2" y="40" width="386" height="31"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="elevationSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="lF8-yy-Qkx"/>
                                                 </connections>
@@ -175,11 +209,12 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYe-wp-TLl" userLabel="WeightView">
-                                        <rect key="frame" x="0.0" y="352" width="390" height="78"/>
+                                        <rect key="frame" x="0.0" y="342" width="390" height="78"/>
                                         <subviews>
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2200" minValue="2200" maxValue="2550" translatesAutoresizingMaskIntoConstraints="NO" id="HFD-Yq-7ZO">
                                                 <rect key="frame" x="2" y="40" width="386" height="31"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="maximumTrackTintColor" red="0.37055522200000002" green="0.37056469920000001" blue="0.37055957319999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <connections>
                                                     <action selector="weightSlider:" destination="BYZ-38-t0r" eventType="valueChanged" id="zEt-H8-27C"/>
                                                 </connections>
@@ -211,21 +246,25 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <constraints>
+                                    <constraint firstItem="MBg-2w-2Aw" firstAttribute="centerX" secondItem="lkU-aw-yXS" secondAttribute="centerX" id="6V0-RF-d3m"/>
+                                </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EVq-p9-hr9" userLabel="Results Stack View">
-                                <rect key="frame" x="0.0" y="54" width="410" height="214"/>
+                                <rect key="frame" x="0.0" y="10" width="410" height="204"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHORT FIELD TAKEOFF C172S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6D-G5-SU4">
-                                        <rect key="frame" x="0.0" y="0.0" width="410" height="50"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="410" height="40"/>
+                                        <color key="backgroundColor" systemColor="systemGrayColor"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="50" id="zzQ-dp-d8M"/>
+                                            <constraint firstAttribute="height" constant="40" id="KVd-s9-33u"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h8U-7y-eWy">
-                                        <rect key="frame" x="0.0" y="50" width="410" height="41"/>
+                                        <rect key="frame" x="0.0" y="40" width="410" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Iae-xj-xKf">
                                                 <rect key="frame" x="373" y="8" width="17" height="17"/>
@@ -260,7 +299,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dJg-Yg-PiN">
-                                        <rect key="frame" x="0.0" y="91" width="410" height="41"/>
+                                        <rect key="frame" x="0.0" y="81" width="410" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Over 50ft" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiZ-Bs-F2Y">
                                                 <rect key="frame" x="15" y="10" width="73" height="21"/>
@@ -295,7 +334,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5GQ-06-c0I">
-                                        <rect key="frame" x="0.0" y="132" width="410" height="41"/>
+                                        <rect key="frame" x="0.0" y="122" width="410" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dhW-El-sFR">
                                                 <rect key="frame" x="288" y="5.5" width="59" height="30"/>
@@ -330,7 +369,7 @@
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="czl-lW-D1t">
-                                        <rect key="frame" x="0.0" y="173" width="410" height="41"/>
+                                        <rect key="frame" x="0.0" y="163" width="410" height="41"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nfp-Rr-H7I">
                                                 <rect key="frame" x="288" y="5.5" width="59" height="30"/>
@@ -365,15 +404,8 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" white="0.16216902299360794" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="backgroundColor" red="0.26051741839999998" green="0.2605243921" blue="0.260520637" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="7" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-QZ-rdD">
-                                <rect key="frame" x="8" y="718" width="394" height="84"/>
-                                <string key="text">Calculated from the "Short field takeoff at 2200, 2400 and 2550 lbs" and "Maximum rate of climb at 2550 Lbs" information from a specific POH. This educational example assumes a specific aircraft configuration (power, flaps, etc), might be innacurate and should never be used for flight.</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="0.11750590717875874" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -381,16 +413,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lkU-aw-yXS" secondAttribute="trailing" constant="10" id="Dhf-Zn-0qx"/>
                             <constraint firstItem="lkU-aw-yXS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EU7-8b-kZq"/>
                             <constraint firstItem="lkU-aw-yXS" firstAttribute="top" secondItem="EVq-p9-hr9" secondAttribute="bottom" constant="10" id="MS3-2N-g6F"/>
-                            <constraint firstAttribute="trailing" secondItem="vbg-QZ-rdD" secondAttribute="trailing" constant="8" id="THs-Fh-0fE"/>
                             <constraint firstItem="EVq-p9-hr9" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="YE7-U6-2Bv"/>
-                            <constraint firstItem="vbg-QZ-rdD" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="g7l-nf-TRr"/>
                             <constraint firstItem="lkU-aw-yXS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="iYK-Rr-KnZ"/>
-                            <constraint firstItem="vbg-QZ-rdD" firstAttribute="top" secondItem="lkU-aw-yXS" secondAttribute="bottom" constant="10" id="lPN-PL-Bnp"/>
                             <constraint firstItem="EVq-p9-hr9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="oOd-Ws-WKa"/>
                             <constraint firstItem="EVq-p9-hr9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="qhw-hL-lcU"/>
                             <constraint firstItem="EVq-p9-hr9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ykj-g0-a5v"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="hey-zR-GYu"/>
                     <connections>
                         <outlet property="altimeterSldierValue" destination="wO0-Xk-8BI" id="sac-aj-cTK"/>
                         <outlet property="altimeterValue" destination="ooi-KN-BDb" id="Z3Q-Tu-Vqc"/>
@@ -404,7 +434,6 @@
                         <outlet property="takeoffValue" destination="Ma2-Su-bQP" id="dtJ-zF-RJK"/>
                         <outlet property="tempValue" destination="UMD-Xm-tDI" id="xEu-xH-cNp"/>
                         <outlet property="temperatureSliderValue" destination="Rpy-Wj-Vlt" id="kpE-Jo-aQW"/>
-                        <outlet property="warningLabel" destination="hH4-9V-c8m" id="tQT-MA-rSA"/>
                         <outlet property="weightSliderValue" destination="HFD-Yq-7ZO" id="87B-JN-JBp"/>
                         <outlet property="weightValue" destination="ZDh-1M-j4w" id="Q8o-Ee-vSB"/>
                     </connections>
@@ -413,5 +442,217 @@
             </objects>
             <point key="canvasLocation" x="137.68115942028987" y="88.392857142857139"/>
         </scene>
+        <!--Eula View Controller-->
+        <scene sceneID="BiM-fi-d18">
+            <objects>
+                <viewController storyboardIdentifier="Eula" id="ulG-fy-DgM" customClass="EulaViewController" customModule="TakeoffWiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="f44-Vv-43h">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="sm7-cZ-0C4">
+                                <rect key="frame" x="20" y="44" width="374" height="550"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="550" id="AV7-qg-RDa"/>
+                                </constraints>
+                                <string key="text">End User License Agreement
+
+Thank you for your interest in this application (the “App”). The App, provided to you by Spirit of Paris, LLC (“Company”) may also enable you to use certain features of the Company's online service (the “Service”). This End User License Agreement, together with the Spirit of Paris Privacy Policy and any additional policies (the “Policies”) (collectively, the “EULA”), as may be updated from time to time, governs your use of the App and the Service. 
+
+BY DOWNLOADING, INSTALLING, OR OTHERWISE ACCESSING OR USING THE APP OR THE SERVICE, YOU AGREE THAT YOU HAVE READ, UNDERSTOOD, AND AGREE TO BE BOUND BY THE EULA. IF YOU DO NOT AGREE, YOU MAY NOT USE THE APP.
+
+The EULA provides greater detail, but it is important to note that:
+
+- the App is licensed, not sold to you, and you may use the App as set forth in this EULA, and if you distribute modified copies you must do so under your own form of license agreement;
+- the App is provided “as is” without warranties of any kind, and the App is not a substitute for a complete, accurate, and up to date authorized copy of the manufacturer's  Pilot's Operating Handbook (“POH”) and supplemented as necessary for any applicable installed equipment and after-market modifications to the aircraft;
+- the App may not be used for flight or flight planning;
+- Company's liability to you is limited to the maximum extent permitted by applicable law;
+- disputes between us regarding the App will be resolved by binding arbitration, and, you waive the right to a jury trial or to participate in a class action for such disputes;
+- if you are using the App on an iOS-based device, you agree to and acknowledge the “Notice Regarding Apple”, below;
+
+1. License Grants
+a. Limited License
+Subject to your complete and ongoing compliance with all the terms and conditions set forth in this EULA, Company grants you a nonexclusive, nontransferable, non-sublicensable, revocable license to install and use the App for your personal use on a supported device, in support of your use of an authorized copy of the applicable aircraft's POH. You may not distribute or modify the App except as expressly provided herein. As used herein, the term “App” includes any update or modification to the App made available to you by Company (unless provided with separate terms). If you are prohibited under applicable law from using the App, you may not use it.
+
+b. Service
+To the extent Company makes any Service available, such as enabling you to store App settings or configurations, your access and use of such Service is subject to your compliance with these terms, applicable law, and any usage guidelines Company may provide. Company may modify, discontinue, or suspend access to any such Service at any time for any reason, and does not guarantee or warrant that the Service or any data you store on the Service will remain accessible, or that your data will not be lost, corrupted, or accessed by Company and/or third parties. While Company does not sell or otherwise intentionally publish your personal information, information you store on the Service may not be confidential, and may be accessed by third parties. You grant Company an unrestricted right to use any such data for any purpose.
+
+2. Intellectual Property
+a. Reservation of Rights
+The App, and all rights thereto, are owned by Company and its licensor, and are protected by copyright, trade dress, patent, and trademark laws of the United States and other jurisdictions, international conventions, and all other relevant intellectual property rights, and applicable laws. As between you and Company, the App and all intellectual property rights therein and thereto, are the sole and exclusive property of Company or its subsidiaries or affiliated companies and/or its third-party licensors. Information and materials available through the App may be owned by third party aircraft manufacturers. You may not to sell, license, distribute, copy, modify, publicly perform or display, transmit, publish, edit, adapt, create derivative works from, or make any use of the App or any materials available through the App, except as expressly provided herein. Company reserves all rights not expressly granted in this EULA. Except as expressly provided herein, you do not acquire any right, title or interest to the App or any derivatives thereof, whether by implication, estoppel, or otherwise.
+
+b. Modifications and Contributions
+With respect to any modification, enhancement, or update to, or derivative work of, the App that you provide to Company, or any feedback or suggestions you may provide with respect to any such modification, enhancement, update, or derivative (collectively “Modifications”), then to the maximum extent permissible pursuant to applicable law, you hereby grant to Company a nonexclusive, worldwide, unlimited, transferable, sublicensable, royalty free, fully paid up right and license to reproduce, distribute, publicly perform, publicly display, prepare derivative works of, make, use, sell, offer for sale, import, and otherwise exploit your Modifications, alone or as a part of a larger work, without limitation. For the avoidance of doubt, any monetary contributions you or any other person may make to the App project are independent of this EULA, and are not and shall not be deemed to constitute license fees or payment for any of the rights or licenses granted hereunder.
+
+3. Indemnity
+You agree on behalf of yourself, your successors and assigns, to indemnify and hold harmless the Company and its licensors, suppliers, and customers, together with all authors of, contributors to, and all distributors of the App, including without limitation their respective affiliates and agents (collectively, the “Indemnified Parties”), from any and all liability, damages, harms, losses, expenses, or other amounts incurred by any of the Indemnified Parties arising out of or in connection with your use of the App or any Modification thereto, or the distribution, use, or exploitation of the App or any such Modification, including any such amounts incurred by Company, you, or any third party for any personal injury, death, or property harm (collectively “Harms”).
+
+4. No Warranties; Disclaimer
+a. Limitations
+You acknowledge and agree that the aircraft's POH is the authoritative source of the aircraft's information, and must be kept up to date with manufacturers' updates and to reflect any after-market modifications to the aircraft. The Apps and any information provided by or available through the App is for additional reference only and you acknowledge and agree that you will confirm and verify all results obtained by using either of them against the aircraft's POH before operating the aircraft in reliance on or in accordance with any such results, including any “emergency” or similar exigency information or features. The algorithms and parameters in the App are approximations of POH values, and are not warranted to be error free. Parameters and algorithms in the App were derived from a POH that may be different than the POH for the aircraft, and may not reflect the equipment installed on the aircraft. In addition, you understand and agree that you are solely responsible to configure the App to correspond to the aircraft, to the extent such configuration is available. You acknowledge and agree that you alone are responsible for verifying that all parameters and algorithms used are appropriate for the aircraft. The App is not a commercial software product, and has not been thoroughly tested.
+
+b. Inherent Risks
+You acknowledge and agree that the operation of an aircraft involves inherent and unpredictable risks of accident, loss, serious bodily injury and/or death, and pain and suffering to you and others, as well as harm or loss to property including the aircraft itself and third party property. You do hereby expressly release all Indemnified Parties from and assume all risk of Harm to yourself and to others that may result from your use of the Ape in connection with the operation of the aircraft.
+
+c. DISLCAIMER
+THE APP AND ALL APPLICABLE SOURCE CODE OR OTHER INFORMATION OR MATERIALS PROVIDED BY COMPANY ARE PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE LAW, COMPANY, ON BEHALF OF ITSELF AND ITS AFFILIATES, SUPPLIERS, AND LICENSORS, INCLUDING WITHOUT LIMITATION ALL AUTHORS AND CREATORS OF THE APP AND ASSOCIATED INFORMATION AND MATERIALS, HEREBY DISCLAIMS ALL WARRANTIES, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, ANY WARRANTIES OF MERCHANTABILITY, NONINFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE, OR THAT THE APP OR ANY POH OR OTHER DATA OR INFORMATION OR OTHER MATERIALS AVAILABLE IN CONNECTION WITH THE APP OR THE WEB PROPERTIES OWNED OR OPERATED BY COMPANY SHALL BE THOROUGHLY TESTED, ACCURATE, UP TO DATE, ERROR-FREE OR UNINTERRUPTED, OR SUITABLE TO ACHIEVE ANY PARTICULAR RESULT.
+
+5. Limitation on Liability
+UNDER NO CIRCUMSTANCES, INCLUDING NEGLIGENCE, WILL COMPANY OR ANY OF ITS AFFILIATES, SUPPLIERS, AND LICENSORS, INCLUDING WITHOUT LIMITATION ALL AUTHORS AND CREATORS OF THE APP AND ASSOCIATED INFORMATION AND MATERIALS, BE LIABLE TO YOU HEREUNDER, OR OTHERWISE IN CONNECTION WITH SUCH MATERIALS OR THE USE OR DISTRIBUTION THEREOF BY YOU OR ANY OTHER PARTY, OR ARISING FROM OTHER DEALINGS WITH RESPECT TO THE APP FOR ANY DIRECT, INDIRECT, INCIDENTAL, EXEMPLARY, PUNITIVE, RELIANCE, SPECIAL OR CONSEQUENTIAL DAMAGES, INCLUDING WITHOUT LIMITATION ANY LOSS OF BUSINESS, LOSS OF USE, LOST PROFIT, LOSS OF DATA, OR DAMAGE TO MOBILE DEVICES, AIRCRAFT OR ANY OTHER PROPERTY, OR ANY DAMAGES WITH RESPECT TO ANY PROPERTY DAMAGE, PERSONAL INJURY OR DEATH. THE FOREGOING LIMITATION APPLIES WHETHER OR NOT COMPANY HAS BEEN INFORMED OF THE POSSIBILITY OF SUCH DAMAGES AND IRRESPECTIVE OF THE FAILURE OF ESSENTIAL PURPOSE OF ANY LIMITED REMEDY HEREIN. TO THE EXTENT THAT THE WAIVER OF DIRECT DAMGES IS NO ENFORCEABLE PURSUANT TO APPLICABLE LAW, IN NO EVENT WILL COMPANY'S LIABILITY TO YOU EXCEED AN AGGREGATE TOTAL EXCEEDING THE LESSER OF THE VALUE LICENSING REVENUE GENERATED BY COMPANY IN RESPECT OF LICENSES GRANTED BY COMPANY TO THE MODIFICATIONS YOU PROVIDE TO COMPANY HEREUNDER, IF ANY, OR TEN DOLLARS ($10USD). You acknowledge that Company's ability to offer the App to you hereunder is based on the above limitations, and that the limitations in this Section represent a reasonable allocation of risk for the parties, and that Company would be unable to offer the App to you without allocating such risk as provided herein.
+
+6. Dispute Resolution
+a. Arbitration
+Except for the right of either party to apply to a court of competent jurisdiction for a temporary restraining order, a preliminary injunction, or other equitable relief to prevent irreparable harm, any dispute as to the interpretation, enforcement, breach, or termination of this EULA will be settled in our individual capacities by binding arbitration in Santa Clara County, California, U.S.A. under the rules of the American Arbitration Association (the “Rules”) by a single arbitrator appointed in accordance with the Rules. If there is a conflict between the Rules and the terms of this EULA, the terms of this EULA will prevail. Judgment upon the decision or award rendered by the arbitrators may be entered in any court of competent jurisdiction. You understand and agree that, by entering into this EULA, you and Company are each waiving the right to a trial by jury or to participate in a class action.
+
+b. No Class Actions
+YOU AND COMPANY AGREE THAT EACH MAY BRING CLAIMS AGAINST THE OTHER WITH REGARD TO DISPUTES ARISING HEREUNDER ONLY IN THEIR INDIVIDUAL CAPACITY AND NOT AS A PLAINTIFF OR CLASS MEMBER IN ANY PURPORTED CLASS OR REPRESENTATIVE PROCEEDING. Further, unless both you and Company agree otherwise, the arbitrator may not consolidate more than one person's claims, and may not otherwise preside over any form of a representative or class proceeding.
+
+c. Small Claims
+Any claims or disputes where the total amount of the award sought is less than ten thousand U.S. dollars (US $10,000.00) may be resolved through binding non-appearance-based arbitration, at the option of the party seeking relief. If non-appearance arbitration is elected as provided above, the arbitration shall be conducted by telephone, online, and/or based solely on written submissions; the specific manner shall be chosen by the party initiating the arbitration. The arbitration shall not involve any personal appearance by the parties or witnesses unless otherwise mutually agreed by the parties.
+
+d. Modifications
+In the event that Company makes any future change to this arbitration provision (other than a change to the Company's address for notice), you may reject any such change by sending us written notice within 30 days of the change to Company's address for notice, in which case this Agreement and your right to use the App and the Service shall be immediately terminated and this arbitration provision, as in effect immediately prior to the amendments you reject shall survive.
+
+e. Enforceability
+If this Section 6, or any portion thereof, is found to be unenforceable, then the entirety of this Section 6 shall be null and void and, in such case, the parties agree that the exclusive jurisdiction and venue described elsewhere in Section 6 shall govern any action arising out of or related to this EULA.
+
+7. Privacy
+You acknowledge and agree that the information you enter into the App and Service and the information the Company collects will be used as described in the POH Perfomance Privacy Policy.
+
+8. Miscellaneous
+This EULA is the entire agreement between you and Company, and supersedes any and all prior agreements, negotiations, or other communications between you and Company, whether oral or written, with respect to the subject matter hereof, and, except as expressly provided herein, cannot be modified except in writing signed by both parties. In the event that any provision of this EULA is held to be invalid or unenforceable, then: (a) such provision shall be deemed reformed to the extent strictly necessary to render such provision valid and enforceable, or if not capable of such reformation shall be deemed severed from this EULA; and (b) the validity and enforceability of all of the other provisions hereof, shall in no way be affected or impaired thereby. You may not assign this EULA without the prior written consent of Company, whether expressly or by operation of law, including in connection with a merger or change of control, and any such attempted assignment shall be void and of no effect. Company may assign this EULA without restriction and without any notice to you. Subject to the foregoing, this EULA shall be binding on the parties and their respective successors and permitted assigns. You acknowledge and understand that if Company is unable to provide the Service as a result of a force majeure event Company will not be in breach of this EULA. A force majeure event means any event beyond the control of Company. The failure to exercise, or delay in exercising, a right, power or remedy provided in this EULA or by law shall not constitute a waiver of that right, power or remedy. Company's waiver of any obligation or breach of this EULA shall not operate as a waiver of any other obligation or subsequent breach of the EULA. The English language version of this EULA shall be the official and controlling version, and any translation provided is solely for convenience.
+
+NOTICE REGARDING APPLE
+You acknowledge that this EULA is between you and Company only, not with Apple, and Apple is not responsible for the Service and the content thereof. Apple has no obligation whatsoever to furnish any maintenance and support services with respect to the Service. In the event of any failure of the Service to conform to any applicable warranty, then you may notify Apple and Apple will refund any applicable purchase price for the App to you; and, to the maximum extent permitted by applicable law, Apple has no other warranty obligation whatsoever with respect to the Service. Apple is not responsible for addressing any claims by you or any third party relating to the Service or your possession and/or use of the Service, including, but not limited to: (i) product liability claims; (ii) any claim that the Service fails to conform to any applicable legal or regulatory requirement; and (iii) claims arising under consumer protection or similar legislation. Apple is not responsible for the investigation, defense, settlement and discharge of any third party claim that the Service and/or your possession and use of the App infringe that third party's intellectual property rights. You agree to comply with any applicable third party terms, when using the Service. Apple, and Apple's subsidiaries, are third party beneficiaries of this EULA, and upon your acceptance of this EULA, Apple will have the right (and will be deemed to have accepted the right) to enforce this EULA against you as a third party beneficiary of this EULA. You hereby represent and warrant that (i) you are not located in a country that is subject to a U.S. Government embargo, or that has been designated by the U.S. Government as a “terrorist supporting” country; and (ii) you are not listed on any U.S. Government list of prohibited or restricted parties.</string>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="152" translatesAutoresizingMaskIntoConstraints="NO" id="ao6-Ph-5Cj">
+                                <rect key="frame" x="30" y="639" width="352" height="42"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rVa-ik-x1U">
+                                        <rect key="frame" x="0.0" y="0.0" width="100" height="42"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="ksA-dx-vch"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="I decline">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="declinePressed:" destination="ulG-fy-DgM" eventType="touchUpInside" id="PaA-Ip-0my"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4tG-wo-k5L">
+                                        <rect key="frame" x="252" y="0.0" width="100" height="42"/>
+                                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="Tj3-wT-ztj"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <state key="normal" title="I accept">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="agreePressed:" destination="ulG-fy-DgM" eventType="touchUpInside" id="L0H-4J-CzF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="00o-5P-si7"/>
+                        <color key="backgroundColor" white="0.1175059072" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ao6-Ph-5Cj" firstAttribute="top" secondItem="sm7-cZ-0C4" secondAttribute="bottom" constant="45" id="Atm-8O-lnm"/>
+                            <constraint firstItem="sm7-cZ-0C4" firstAttribute="trailing" secondItem="f44-Vv-43h" secondAttribute="trailingMargin" id="AyS-uE-PoK"/>
+                            <constraint firstItem="ao6-Ph-5Cj" firstAttribute="leading" secondItem="00o-5P-si7" secondAttribute="leading" constant="30" id="gSY-Wg-Qg7"/>
+                            <constraint firstItem="sm7-cZ-0C4" firstAttribute="leading" secondItem="f44-Vv-43h" secondAttribute="leadingMargin" id="iby-wJ-mdm"/>
+                            <constraint firstItem="sm7-cZ-0C4" firstAttribute="top" secondItem="00o-5P-si7" secondAttribute="top" id="j8W-dg-HzP"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="er0-ch-fzq" kind="show" identifier="declineSegue" id="gKS-Ar-F9q"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="agreeSegue" id="YXL-Ro-z0M"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S4y-tZ-Di6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-673.91304347826087" y="88.392857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9RW-0c-lTD">
+            <objects>
+                <viewController storyboardIdentifier="decline" id="er0-ch-fzq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tdk-kO-nTW">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="OV8-8E-Lgb">
+                                <rect key="frame" x="41" y="156" width="333" height="318"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">YOU HAVE DECLINED THE TERMS AND CONDITIONS OUTLINED IN THE END USER LICENSE AGREEMENT.   YOU ARE NOT AUTHORIZED TO USE THE APPLICATION AND MUST UNINSTALL IT.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="RCW-ef-kmg"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="C7D-6N-hUT"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SQT-8g-lyb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-600" y="853.79464285714278"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Dva-mj-ils">
+            <objects>
+                <viewController id="ck2-qH-fUW" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="7hb-FU-poa">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="15" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vbg-QZ-rdD">
+                                <rect key="frame" x="10" y="139" width="394" height="569"/>
+                                <string key="text">DO NOT USE FOR FLIGHT.   The results are calculated from the "Short field takeoff at 2200, 2400 and 2550 lbs" and the "Maximum rate of climb at 2550 Lbs" information from a specific POH. This educational example assumes a specific aircraft configuration (power, flaps, etc), might be innacurate and should never be used for flight.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="B3M-HF-pHA"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vbg-QZ-rdD" firstAttribute="top" secondItem="B3M-HF-pHA" secondAttribute="top" constant="139" id="68E-ce-zJd"/>
+                            <constraint firstItem="B3M-HF-pHA" firstAttribute="bottom" secondItem="vbg-QZ-rdD" secondAttribute="bottom" constant="100" id="aug-KG-9Pv"/>
+                            <constraint firstItem="B3M-HF-pHA" firstAttribute="trailing" secondItem="vbg-QZ-rdD" secondAttribute="trailing" constant="10" id="eiz-xX-QdE"/>
+                            <constraint firstItem="vbg-QZ-rdD" firstAttribute="leading" secondItem="7hb-FU-poa" secondAttribute="leading" constant="10" id="pOG-br-9H6"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="ECI-u9-SpR"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BtL-Ak-HW6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="989.85507246376824" y="87.723214285714278"/>
+        </scene>
     </scenes>
+    <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
