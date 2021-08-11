@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SecularOne-Regular.ttf">
+            <string>SecularOne-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ResultsPanelView" customModule="TakeoffWiz" customModuleProvider="target">
+            <connections>
+                <outlet property="climbRate" destination="VYy-1q-5Ps" id="EIO-lP-Fv6"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="JAX-ka-lri"/>
+                <outlet property="gradient" destination="qNb-DT-D88" id="Fyc-W9-K0F"/>
+                <outlet property="over50Ft" destination="ycW-Zj-eti" id="qDc-BH-RwE"/>
+                <outlet property="takeoffRoll" destination="9SO-T9-Cxt" id="UPj-Tx-VCd"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="410" height="214"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="r6K-Go-4dp">
+                    <rect key="frame" x="0.0" y="0.0" width="410" height="214"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SHORT FIELD TAKEOFF C172S" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f1-VS-dtg">
+                            <rect key="frame" x="0.0" y="0.0" width="410" height="50"/>
+                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="b1Z-4D-qKN"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="27"/>
+                            <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RAg-Dz-Djv">
+                            <rect key="frame" x="0.0" y="50" width="410" height="41"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oqy-vj-7EP">
+                                    <rect key="frame" x="5" y="0.0" width="400" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   TAKEOFF ROLL" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mNR-hg-G5j">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="41"/>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="555" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9SO-T9-Cxt">
+                                            <rect key="frame" x="240" y="0.0" width="100" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="y92-OJ-6uY"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QHc-04-v4v">
+                                            <rect key="frame" x="350" y="0.0" width="50" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="JN2-dj-Nii"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="oqy-vj-7EP" firstAttribute="leading" secondItem="RAg-Dz-Djv" secondAttribute="leading" constant="5" id="ILb-Eh-PRf"/>
+                                <constraint firstAttribute="height" constant="41" id="Lvy-G9-7l5"/>
+                                <constraint firstItem="oqy-vj-7EP" firstAttribute="top" secondItem="RAg-Dz-Djv" secondAttribute="top" id="SVZ-Lm-NrM"/>
+                                <constraint firstAttribute="bottom" secondItem="oqy-vj-7EP" secondAttribute="bottom" id="br8-jA-iUX"/>
+                                <constraint firstAttribute="trailing" secondItem="oqy-vj-7EP" secondAttribute="trailing" constant="5" id="dDs-4k-u7G"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47k-zh-Mec">
+                            <rect key="frame" x="0.0" y="91" width="410" height="41"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="0PG-8V-EnB">
+                                    <rect key="frame" x="5" y="0.0" width="400" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   OVER 50FT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EKr-YT-8Dp">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="41"/>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycW-Zj-eti">
+                                            <rect key="frame" x="240" y="0.0" width="100" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="PT7-f0-9S2"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J3i-qH-kmy">
+                                            <rect key="frame" x="350" y="0.0" width="50" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="PnK-w5-qEV"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="0PG-8V-EnB" firstAttribute="leading" secondItem="47k-zh-Mec" secondAttribute="leading" constant="5" id="8YB-aJ-pbM"/>
+                                <constraint firstAttribute="bottom" secondItem="0PG-8V-EnB" secondAttribute="bottom" id="ANF-wL-Qon"/>
+                                <constraint firstAttribute="height" constant="41" id="CKe-fj-mIo"/>
+                                <constraint firstItem="0PG-8V-EnB" firstAttribute="top" secondItem="47k-zh-Mec" secondAttribute="top" id="VId-vo-pim"/>
+                                <constraint firstAttribute="trailing" secondItem="0PG-8V-EnB" secondAttribute="trailing" constant="5" id="XPq-dT-FOS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dQv-RP-kDK">
+                            <rect key="frame" x="0.0" y="132" width="410" height="41"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6ii-ns-IMe">
+                                    <rect key="frame" x="5" y="0.0" width="400" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   CLIMB RATE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCL-RL-bWw">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="41"/>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="777" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYy-1q-5Ps">
+                                            <rect key="frame" x="240" y="0.0" width="100" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="CiM-m1-6gh"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FPM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0vD-hz-Oll">
+                                            <rect key="frame" x="350" y="0.0" width="50" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="J9k-Y6-3ib"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="bottom" secondItem="6ii-ns-IMe" secondAttribute="bottom" id="3I6-rn-JAQ"/>
+                                <constraint firstItem="6ii-ns-IMe" firstAttribute="top" secondItem="dQv-RP-kDK" secondAttribute="top" id="dRy-d1-Dyz"/>
+                                <constraint firstItem="6ii-ns-IMe" firstAttribute="leading" secondItem="dQv-RP-kDK" secondAttribute="leading" constant="5" id="oSb-br-GAv"/>
+                                <constraint firstAttribute="height" constant="41" id="oiu-fD-ZpJ"/>
+                                <constraint firstAttribute="trailing" secondItem="6ii-ns-IMe" secondAttribute="trailing" constant="5" id="rkE-ET-utA"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rg4-Q8-kaX">
+                            <rect key="frame" x="0.0" y="173" width="410" height="41"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Sds-Cg-Ye3">
+                                    <rect key="frame" x="5" y="0.0" width="400" height="41"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="   GRADIENT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZoN-9M-Iel">
+                                            <rect key="frame" x="0.0" y="0.0" width="230" height="41"/>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="888" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qNb-DT-D88">
+                                            <rect key="frame" x="240" y="0.0" width="100" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="100" id="coa-SF-Mnb"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="28"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FT/NM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-FE-bFM">
+                                            <rect key="frame" x="350" y="0.0" width="50" height="41"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="50" id="Nly-VG-ELQ"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" name="SecularOne-Regular" family="Secular One" pointSize="14"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="41" id="6Qs-Kp-ox9"/>
+                                <constraint firstAttribute="bottom" secondItem="Sds-Cg-Ye3" secondAttribute="bottom" id="AFI-JX-xN6"/>
+                                <constraint firstAttribute="trailing" secondItem="Sds-Cg-Ye3" secondAttribute="trailing" constant="5" id="K8R-1H-DmQ"/>
+                                <constraint firstItem="Sds-Cg-Ye3" firstAttribute="leading" secondItem="rg4-Q8-kaX" secondAttribute="leading" constant="5" id="WSB-o4-JIG"/>
+                                <constraint firstItem="Sds-Cg-Ye3" firstAttribute="top" secondItem="rg4-Q8-kaX" secondAttribute="top" id="opV-1Y-c5y"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="r6K-Go-4dp" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="7VA-NO-EBx"/>
+                <constraint firstItem="r6K-Go-4dp" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="EzW-xL-4ke"/>
+                <constraint firstItem="r6K-Go-4dp" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="JDz-CD-fbh"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="r6K-Go-4dp" secondAttribute="bottom" id="Pc7-bt-SnF"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="-117.39130434782609" y="-66.294642857142861"/>
+        </view>
+    </objects>
+</document>

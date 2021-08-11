@@ -30,21 +30,25 @@ class ViewController: UIViewController {
     @IBOutlet weak var climbValue: UILabel!
     @IBOutlet weak var gradientValue: UILabel!
     
+    @IBOutlet weak var resultsPanel: ResultsPanelView!
+    
     var brain = Brain()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         resetValues()
         calcAndDisplayResults()
+        
+        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
+        backgroundImage.image = UIImage(named: "skyhawk_wingspan.png")
+        backgroundImage.contentMode = .scaleAspectFit
+        self.view.insertSubview(backgroundImage, at: 0)
     }
     
     // displays results from the brain
     private func displayAutoResultsFromBrain()
     {
-        takeoffValue.text = Utilities.convertFloatToString(brain.takeoffRoll)
-        overValue.text = Utilities.convertFloatToString(brain.over50Ft)
-        climbValue.text = Utilities.convertFloatToString(brain.climbRate)
-        gradientValue.text = Utilities.convertFloatToString(brain.gradient)
+        resultsPanel.updateResult(takeoffRoll: Utilities.convertFloatToString(brain.takeoffRoll), over50Ft: Utilities.convertFloatToString(brain.over50Ft), climbRate: Utilities.convertFloatToString(brain.climbRate), gradient: Utilities.convertFloatToString(brain.gradient))
     }
     
     // sets and displays label preset values from Brain
@@ -55,6 +59,8 @@ class ViewController: UIViewController {
         altimeterValue.text = Utilities.convertFloatToStringTwo(brain.altimeter)
         elevationValue.text = Utilities.displayMetric(brain.elevation,step: 100.0 )
         weightValue.text = Utilities.displayMetric(brain.weight,step: 50.0)
+        
+        
     }
     
     //  sets starting slider values to preset brain values
