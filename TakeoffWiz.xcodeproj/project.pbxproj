@@ -18,6 +18,8 @@
 		9184970A26C448C7008A38EF /* SecularOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9184970926C448BD008A38EF /* SecularOne-Regular.ttf */; };
 		9184970C26C45015008A38EF /* skyhawk_wingspan.png in Resources */ = {isa = PBXBuildFile; fileRef = 9184970B26C45015008A38EF /* skyhawk_wingspan.png */; };
 		9184971026C6E6FE008A38EF /* Aircraft.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184970F26C6E6FE008A38EF /* Aircraft.swift */; };
+		9184971226CB2210008A38EF /* Cessna152.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184971126CB2210008A38EF /* Cessna152.swift */; };
+		9184971426CB2237008A38EF /* CirrusSR20G6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9184971326CB2237008A38EF /* CirrusSR20G6.swift */; };
 		91AFA38B26C43499009CC944 /* ResultsPanelView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 91AFA38A26C43499009CC944 /* ResultsPanelView.xib */; };
 		91AFA38F26C4383B009CC944 /* ResultsPanelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91AFA38E26C4383B009CC944 /* ResultsPanelView.swift */; };
 		91B53F6126BCEF1C008118F7 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91B53F6026BCEF1C008118F7 /* Utilities.swift */; };
@@ -40,6 +42,8 @@
 		9184970926C448BD008A38EF /* SecularOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SecularOne-Regular.ttf"; sourceTree = "<group>"; };
 		9184970B26C45015008A38EF /* skyhawk_wingspan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = skyhawk_wingspan.png; sourceTree = "<group>"; };
 		9184970F26C6E6FE008A38EF /* Aircraft.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Aircraft.swift; sourceTree = "<group>"; };
+		9184971126CB2210008A38EF /* Cessna152.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cessna152.swift; sourceTree = "<group>"; };
+		9184971326CB2237008A38EF /* CirrusSR20G6.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirrusSR20G6.swift; sourceTree = "<group>"; };
 		91AFA38A26C43499009CC944 /* ResultsPanelView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ResultsPanelView.xib; sourceTree = "<group>"; };
 		91AFA38E26C4383B009CC944 /* ResultsPanelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsPanelView.swift; sourceTree = "<group>"; };
 		91B53F6026BCEF1C008118F7 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
@@ -89,6 +93,8 @@
 				91796E4A26B88875005EDF13 /* Brain.swift */,
 				9184970F26C6E6FE008A38EF /* Aircraft.swift */,
 				91B53F6226BCFA60008118F7 /* Cessna172s.swift */,
+				9184971326CB2237008A38EF /* CirrusSR20G6.swift */,
+				9184971126CB2210008A38EF /* Cessna152.swift */,
 				9184970926C448BD008A38EF /* SecularOne-Regular.ttf */,
 				91B53F6626BDAD49008118F7 /* finalDesktop.png */,
 				9184970B26C45015008A38EF /* skyhawk_wingspan.png */,
@@ -179,9 +185,11 @@
 				91796E3526AF99DD005EDF13 /* AppDelegate.swift in Sources */,
 				91796E4B26B88875005EDF13 /* Brain.swift in Sources */,
 				91B53F6326BCFA60008118F7 /* Cessna172s.swift in Sources */,
+				9184971426CB2237008A38EF /* CirrusSR20G6.swift in Sources */,
 				91B53F6526BD0994008118F7 /* EulaViewController.swift in Sources */,
 				9184971026C6E6FE008A38EF /* Aircraft.swift in Sources */,
 				91B53F6126BCEF1C008118F7 /* Utilities.swift in Sources */,
+				9184971226CB2210008A38EF /* Cessna152.swift in Sources */,
 				91AFA38F26C4383B009CC944 /* ResultsPanelView.swift in Sources */,
 				91796E3726AF99DD005EDF13 /* SceneDelegate.swift in Sources */,
 			);
