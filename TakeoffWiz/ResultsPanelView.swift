@@ -14,6 +14,7 @@ class ResultsPanelView: UIView {
     @IBOutlet weak var climbRate: UILabel!
     @IBOutlet weak var gradient: UILabel!
     
+    @IBOutlet weak var titlename: UILabel!
     @IBOutlet weak var takeoffRoll: UILabel!
     
     
@@ -43,10 +44,11 @@ class ResultsPanelView: UIView {
         contentView.frame = self.bounds
     }
     
-    func updateResult(takeoffRoll: String, over50Ft: String, climbRate: String, gradient: String) {
+    func updateResult(takeoffRoll: String, over50Ft: String, climbRate: String, gradient: String, titlename: String) {
         self.takeoffRoll.text = takeoffRoll
         self.over50Ft.text = over50Ft
         self.climbRate.text = climbRate
         self.gradient.text = gradient
+        self.titlename.text = titlename
     }
 }

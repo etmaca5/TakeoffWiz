@@ -81,8 +81,10 @@
                                                         <segments>
                                                             <segment title="Cessna 152"/>
                                                             <segment title="Cessna 172"/>
-                                                            <segment title="Cessna 182"/>
                                                         </segments>
+                                                        <connections>
+                                                            <action selector="changeAircraft:" destination="BYZ-38-t0r" eventType="valueChanged" id="qvz-lY-vYX"/>
+                                                        </connections>
                                                     </segmentedControl>
                                                 </subviews>
                                                 <constraints>

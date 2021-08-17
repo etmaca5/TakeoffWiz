@@ -19,6 +19,7 @@
                 <outlet property="gradient" destination="qNb-DT-D88" id="Fyc-W9-K0F"/>
                 <outlet property="over50Ft" destination="ycW-Zj-eti" id="qDc-BH-RwE"/>
                 <outlet property="takeoffRoll" destination="9SO-T9-Cxt" id="UPj-Tx-VCd"/>
+                <outlet property="titlename" destination="0f1-VS-dtg" id="EXU-01-2Zr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

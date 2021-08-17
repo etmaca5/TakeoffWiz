@@ -33,14 +33,15 @@ class ViewController: UIViewController {
     @IBOutlet weak var resultsPanel: ResultsPanelView!
     
     var brain = Brain()
+    let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        brain.setAircraft("Cessna152");
         resetValues()
         calcAndDisplayResults()
         
-        let backgroundImage = UIImageView(frame: UIScreen.main.bounds)
-        backgroundImage.image = UIImage(named: "skyhawk_wingspan.png")
+        backgroundImage.image = UIImage(named: brain.aircraft.planeImage())
         backgroundImage.contentMode = .scaleAspectFit
         self.view.insertSubview(backgroundImage, at: 0)
     }
@@ -48,7 +49,9 @@ class ViewController: UIViewController {
     // displays results from the brain
     private func displayAutoResultsFromBrain()
     {
-        resultsPanel.updateResult(takeoffRoll: Utilities.convertFloatToString(brain.takeoffRoll), over50Ft: Utilities.convertFloatToString(brain.over50Ft), climbRate: Utilities.convertFloatToString(brain.climbRate), gradient: Utilities.convertFloatToString(brain.gradient))
+        resultsPanel.updateResult(takeoffRoll: Utilities.convertFloatToString(brain.takeoffRoll), over50Ft: Utilities.convertFloatToString(brain.over50Ft), climbRate: Utilities.convertFloatToString(brain.climbRate), gradient: Utilities.convertFloatToString(brain.gradient), titlename: brain.aircraft.giveMeTheAircraftName())
+            weightSliderValue.isHidden = brain.aircraft.hideWeightSlider()
+            weightValue.text = Utilities.displayMetric(brain.weight,step: 50.0)
     }
     
     // sets and displays label preset values from Brain
@@ -59,8 +62,6 @@ class ViewController: UIViewController {
         altimeterValue.text = Utilities.convertFloatToStringTwo(brain.altimeter)
         elevationValue.text = Utilities.displayMetric(brain.elevation,step: 100.0 )
         weightValue.text = Utilities.displayMetric(brain.weight,step: 50.0)
-        
-        
     }
     
     //  sets starting slider values to preset brain values
@@ -117,6 +118,19 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func changeAircraft(_ sender: UISegmentedControl) {
+        if (sender.selectedSegmentIndex == 0) {
+            brain.setAircraft("Cessna152")
+        } else {
+            brain.setAircraft("Cessna172")
+        }
+        
+        backgroundImage.image = UIImage(named: brain.aircraft.planeImage())
+        backgroundImage.contentMode = .scaleAspectFit
+        self.view.insertSubview(backgroundImage, at: 0)
+        
+        calcAndDisplayResults()
+    }
     
     
     // gonna have a function called update and every time any of the sliders are touched you call the function and update the value of sliderLabel
