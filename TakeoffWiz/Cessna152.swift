@@ -110,30 +110,7 @@ class Cessna152 : Aircraft
     func planeImage () -> String {
         return "152_wingspan_img.png";
     }
-    
-    //this is for the cessna
-    //need to figure out what the best parameters for this are, keeping in mind that the planes might change
-    //we still need something that will get the heavier weight and the lighter weight
-    func interpolateWeight(_ weight:Float, _ lightWeight:Int, _ heavyWeight:Int ,_ xtemp:Float,_ ypressure:Float,_ dataLight:[[Int]],_ dataHeavy:[[Int]],_ columns:[Int],_ rows:[Int])-> Float
-    {
-        let lighterWeightOutput: Float = Utilities.interpolateQuad(xtemp, ypressure, dataLight, columns, rows)
-        let heavierWeightOutput: Float = Utilities.interpolateQuad(xtemp, ypressure, dataHeavy, columns, rows)
         
-        //need to change for each plane
-        var weightFactor:Float = (weight - Float(lightWeight)) / Float(heavyWeight - lightWeight)
-        if( heavyWeight == lightWeight )
-        {
-            weightFactor = 0
-        }
-        let outputDifference:Float = heavierWeightOutput - lighterWeightOutput
-        return lighterWeightOutput + (outputDifference * weightFactor)
-    }
-    
-    func calcWithWeight(_ finaldataLight:[[Int]], _ finaldataHeavy:[[Int]], _ columnHeaders:[Int], _ rowHeaders:[Int])-> Float
-    {
-        return interpolateWeight(weight, lightWeight, heavyWeight , temp, pressureAltitude, finaldataLight, finaldataHeavy, columnHeaders , rowHeaders)
-    }
-    
     func takeoffRoll50ftCalc()
     {
         let result:Float =
